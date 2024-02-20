@@ -14,7 +14,7 @@ function validateNumber(number) {
   return validators.every(validator => validator(number));
 }
 
-function handleValidationButtonClick(value, validationResult) {
+function handleValidateButtonClick(value, validationResult) {
   const isValid = validateNumber(value);
 
   isValid ? validationResult.innerHTML = VALIDATION_MESSAGES.SUCCESS : validationResult.innerHTML = VALIDATION_MESSAGES.ERROR;
@@ -40,7 +40,7 @@ function main() {
     const inputValue = +validationInput.value;
 
     if (isValidateButton) {
-      handleValidationButtonClick(inputValue, validationResult);
+      handleValidateButtonClick(inputValue, validationResult);
     } else if (isClearButton) {
       handleClearButtonClick(validationInput, validationResult);
     }
