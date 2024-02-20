@@ -27,10 +27,10 @@ function handleClearButtonClick(validationInput, validationResult) {
 
 function main() {
   const validationInput = document.getElementById('validationInput');
-  const validationButtons = document.getElementById('validationButtons');
+  const actionButtons = document.getElementById('actionButtons');
   const validationResult = document.getElementById('validationResult');
 
-  validationButtons.addEventListener('click', (event) => {
+  actionButtons.addEventListener('click', (event) => {
     if (event.target.tagName !== 'BUTTON') { // listen for button clicks only
       return;
     }
