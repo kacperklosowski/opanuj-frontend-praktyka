@@ -3,7 +3,7 @@ const VALIDATION_MESSAGES = {
   SUCCESS: 'The number is valid'
 };
 
-function validate(number) {
+function validateNumber(number) {
   const validators = [
     (number) => number > 0,
     (number) => number < 100,
@@ -15,7 +15,7 @@ function validate(number) {
 }
 
 function handleValidationButtonClick(value, validationResult) {
-  const isValid = validate(value);
+  const isValid = validateNumber(value);
 
   isValid ? validationResult.innerHTML = VALIDATION_MESSAGES.SUCCESS : validationResult.innerHTML = VALIDATION_MESSAGES.ERROR;
 }
