@@ -35,11 +35,11 @@ function main() {
       return;
     }
 
-    const isValidationButton = event.target.id === 'validationButton';
+    const isValidateButton = event.target.id === 'validateButton';
     const isClearButton = event.target.id === 'clearButton';
     const inputValue = +validationInput.value;
 
-    if (isValidationButton) {
+    if (isValidateButton) {
       handleValidationButtonClick(inputValue, validationResult);
     } else if (isClearButton) {
       handleClearButtonClick(validationInput, validationResult);
