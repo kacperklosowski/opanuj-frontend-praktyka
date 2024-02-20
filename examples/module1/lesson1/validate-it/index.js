@@ -1,5 +1,5 @@
 const VALIDATION_MESSAGES = {
-  ERROR: 'Invalid number. Please enter a number between 0 and 100',
+  ERROR: 'Invalid number. Please try again.',
   SUCCESS: 'The number is valid'
 };
 
