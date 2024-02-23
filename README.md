@@ -70,7 +70,7 @@ Przykładowe rozwiązania ćwiczeń umieszczamy w folderach `examples/{module}/{
 Aby uruchomić wybrany projekt, np. `module1/lesson1/_solutions/solver` wystarczy, że wykonasz polecenie:
 
 ```bash
-npm run example _solutions/solver
+npm run example _solutions/solver_solution
 ```
 
 ## Aktualizacja forka
