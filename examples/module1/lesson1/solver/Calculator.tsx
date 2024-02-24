@@ -23,6 +23,8 @@ export default function Calculator()  {
     }
   };
 
+  const shouldDisableButton = isNaN(operandA) || isNaN(operandB);
+
   return (
     <div>
       <div className="grid grid-cols-2 gap-x-4">
@@ -30,10 +32,10 @@ export default function Calculator()  {
         <NumberInput value={operandB} setValue={setOperandB} />
       </div>
       <div className="grid grid-cols-4 gap-x-4 my-4">
-        <OperationButton label={Operation.SUM} onClick={() => performCalculation(sum)} />
-        <OperationButton label={Operation.SUBTRACT} onClick={() => performCalculation(subtract)} />
-        <OperationButton label={Operation.MULTIPLY} onClick={() => performCalculation(multiply)} />
-        <OperationButton label={Operation.DIVIDE} onClick={() => performCalculation(divide)} />
+        <OperationButton label={Operation.SUM} onClick={() => performCalculation(sum)} disabled={shouldDisableButton} />
+        <OperationButton label={Operation.SUBTRACT} onClick={() => performCalculation(subtract)} disabled={shouldDisableButton} />
+        <OperationButton label={Operation.SUBTRACT} onClick={() => performCalculation(multiply)} disabled={shouldDisableButton} />
+        <OperationButton label={Operation.DIVIDE} onClick={() => performCalculation(divide)} disabled={shouldDisableButton} />
       </div>
       {errorMessage ? <span className="text-red-500 font-bold">{errorMessage}</span> : `Result: ${result}`}
     </div>
