@@ -21,4 +21,14 @@ describe('Form validation', () => {
         const errors = formValidator('John', 'Doe', 30);
         expect(errors.length).toBe(0);
     });
+
+    test('should return an error if first name is too short', () => {
+        const errors = formValidator('J', 'Doe', 30);
+        expect(errors).toContain('First name must be at least 2 characters long');
+    });
+
+    test('should return an error if last name is too short', () => {
+        const errors = formValidator('John', 'D', 30);
+        expect(errors).toContain('Last name must be at least 2 characters long');
+    });
 });
