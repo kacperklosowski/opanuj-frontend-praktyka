@@ -31,4 +31,9 @@ describe('Form validation', () => {
         const errors = formValidator('John', 'D', 30);
         expect(errors).toContain('Last name must be at least 2 characters long');
     });
+
+    test('should throw an error if age is not a number', () => {
+        // @ts-ignore | so we can test the error
+        expect(() => formValidator('John', 'Doe', '7')).toThrow('Age must be a number');
+    });
 });
