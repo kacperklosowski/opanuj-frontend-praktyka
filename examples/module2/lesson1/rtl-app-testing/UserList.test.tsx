@@ -1,11 +1,10 @@
 // @vitest-environment jsdom
 
 import '@testing-library/jest-dom/vitest';
-import { it, expect, afterEach } from 'vitest';
+import { it, expect, afterEach, describe } from 'vitest';
 import { cleanup, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import UserList from './UserList';
-import { describe } from 'node:test';
 
 afterEach(cleanup);
 
