@@ -16,8 +16,8 @@ export function useUsersClient() {
     try {
       const response = await axios.get<User[]>(API_URL, { timeout: 5000 });
       setUsers(response.data);
-    } catch (error: any) {
-      if (error.code === 'ECONNABORTED') {
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.code === 'ECONNABORTED') {
         setIsTimeoutError(true);
       }
     }
