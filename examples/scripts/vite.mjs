@@ -28,6 +28,9 @@ if (projectPaths[0].includes('angular')) {
     root: projectPaths[0],
     server: {
       port: 3000,
+      proxy: {
+        '/api': 'http://localhost:3000'
+      }
     },
     plugins: [
       react(),
